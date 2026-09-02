@@ -18,14 +18,34 @@ This project backtests a monthly cross-sectional momentum strategy on a universe
 6. Performance metrics: annualised return, volatility, Sharpe ratio, max drawdown, rolling Sharpe.
 
 ## Results
-- Momentum portfolio annualised return: 10.87%
-- Benchmark annualised return: 11.18%
-- Sharpe ratio: 0.81
-- Maximum drawdown: -25.60%
-- Equity curve, drawdown, and rolling Sharpe shown in `/plots`
-- ![Equity Curve](plots/equity_curve.png)
-- ### Single-Asset Moving Average Crossover (SPY)
+
+| Metric               | Momentum (Top 3) | Equal-Weight Benchmark |
+|----------------------|------------------|------------------------|
+| Annualised Return    | 10.87%           | 11.18%                 |
+| Sharpe Ratio         | 0.81             | 0.922                  |
+| Maximum Drawdown     | -25.60%          | -25.98%                |
+
+*Note: Replace example values with your actual benchmark metrics. You can find them by running `python main.py` and reading the printed table.*
+
+### Equity Curve
+![Equity Curve](plots/equity_curve.png)
+
+### Drawdown
+![Drawdown](plots/drawdown.png)
+
+### Rolling 1-Year Sharpe Ratio
+![Rolling Sharpe](plots/rolling_sharpe.png)
+
+### Single-Asset Moving Average Crossover (SPY)
 ![MA Crossover](plots/ma_crossover_equity.png)
+
+## Project Structure
+- `data.py` – downloads and cleans ETF data
+- `strategies.py` – signal generation (moving average crossover, momentum signals)
+- `backtest.py` – converts monthly weights to daily positions, calculates portfolio returns
+- `metrics.py` – performance metrics (annualised return, volatility, Sharpe, max drawdown, rolling Sharpe)
+- `main.py` – runs the full backtest and generates plots
+- `plots/` – output images
 
 ## Limitations
 - No transaction costs or slippage modelled.
@@ -33,6 +53,6 @@ This project backtests a monthly cross-sectional momentum strategy on a universe
 - Short lookback period not optimised.
 - Risk-free rate assumed zero.
 
-## How to run
-`pip install -r requirements.txt`
-`python main.py`
+## How to Run
+pip install -r requirements.txt
+python main.py
