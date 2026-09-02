@@ -22,3 +22,9 @@ def max_drawdown(returns):
     running_max = cum.cummax()
     drawdown = cum / running_max - 1
     return drawdown.min()
+
+def rolling_sharpe(returns, window=252):
+    """Compute rolling annualized Sharpe ratio over a given window (default 1 year)."""
+    rolling_mean = returns.rolling(window).mean()
+    rolling_std = returns.rolling(window).std()
+    return rolling_mean / rolling_std * np.sqrt(252)
