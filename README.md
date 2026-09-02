@@ -18,11 +18,14 @@ This project backtests a monthly cross-sectional momentum strategy on a universe
 6. Performance metrics: annualised return, volatility, Sharpe ratio, max drawdown, rolling Sharpe.
 
 ## Results
-- Momentum portfolio annualised return: X%
-- Benchmark annualised return: Y%
-- Sharpe ratio: Z
-- Maximum drawdown: W%
+- Momentum portfolio annualised return: 10.87%
+- Benchmark annualised return: 11.18%
+- Sharpe ratio: 0.81
+- Maximum drawdown: -25.60%
 - Equity curve, drawdown, and rolling Sharpe shown in `/plots`
+- ![Equity Curve](plots/equity_curve.png)
+- ### Single-Asset Moving Average Crossover (SPY)
+![MA Crossover](plots/ma_crossover_equity.png)
 
 ## Limitations
 - No transaction costs or slippage modelled.
