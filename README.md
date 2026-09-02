@@ -23,6 +23,9 @@ This project backtests a monthly cross-sectional momentum strategy on a universe
 - Sharpe ratio: 0.81
 - Maximum drawdown: -25.60%
 - Equity curve, drawdown, and rolling Sharpe shown in `/plots`
+- ![Equity Curve](plots/equity_curve.png)
+- ### Single-Asset Moving Average Crossover (SPY)
+![MA Crossover](plots/ma_crossover_equity.png)
 
 ## Limitations
 - No transaction costs or slippage modelled.
